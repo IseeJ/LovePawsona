@@ -1,0 +1,429 @@
+<!--https://github.com/IseeJ-->
+<!--please don't use my code without permission!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Pawsona Special</title>
+    <link rel="icon" type="image/x-icon" href="IMG/icon.PNG">
+</head>
+<style>
+    :root {
+        --1-color: #fff2d8;
+        --7-color: #f2e9d4;
+        --2-color: #fccdd3;
+        --3-color: #fca2cf;
+        --4-color: #d8f4f6;
+        --5-color: #ade1eb;
+        --6-color: #2a3031;
+        --8-color: #f3dada;
+        --9-color:#dbaec5;
+    }
+
+    body {
+        background-color: var(--8-color);
+        font-family: 'Andale Mono', monospace;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .start-page {
+        width: 600px;
+        margin: 0 auto;
+        background: var(--8-color);
+        color: var(--6-color);
+        border-radius: 36px;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Andale Mono', monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .start-button,
+    .restart-button {
+        font-family: 'Andale Mono', monospace;
+        background-color: #fccdd3;
+        color: rgb(22, 22, 22);
+        border: none;
+        padding: 10px 20px;
+        margin: 10px 5px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .start-button:hover,
+    .restart-button:hover {
+        background-color: #fca2cf;
+    }
+
+    .card {
+        width: 300px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 20px;
+        /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);*/
+        display: none; /* Initially hidden */
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer;
+    }
+
+    .card-meaning {
+        font-size: 16px;
+        color: var(--6-color);
+        margin-top: 10px;
+        display: none; /* Initially hidden */
+    }
+
+    .card-button {
+        font-family: 'Andale Mono', monospace;
+        background-color: var(--4-color);
+        color: var(--6-color);
+        border: none;
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .card-button:hover {
+        background-color: var(--5-color);
+    }
+    #card-container {
+    width: 300px;        
+    height: 300px;      
+    background-color: #fff;
+    border-radius: 20px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);*/
+    display: block;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    background-image: url('IMG/bb.jpg');
+}
+
+footer {
+            text-align: center;
+        }
+
+        footer a{
+            font-size: 10px;
+            text-decoration: none;
+            color: var(--9-color); 
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--3-color); 
+        }
+        p2 {
+            font-size: 9.5px;
+        }
+        p3 {
+            font-size: 8px;
+        }
+
+        .a2 {
+            font-size: 28px;
+            text-decoration: none;
+            color: #d5428c;
+            transition: color 0.3s ease, font-size 0.3s ease;
+
+        }
+
+        .a2:hover {
+            color: #fca2cf;
+            font-size: 32px;
+            cursor: pointer;
+        }
+        .icon {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0;
+            pointer-events: none;
+            animation: fall 3s ease-in-out forwards;
+        }
+
+        .star {
+            color: #96ddec;
+        }
+
+        .heart {
+            color: #ef88bb;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(500px) scale(0.5);
+                opacity: 0;
+            }
+        }
+</style>
+
+<body>
+    <div class="start-page" id="start-page">
+        <h1>
+            <div class="a2" onclick="triggerIconShower(event)">
+                Love Pawsona Oracle</div>  
+        </h1>
+        <button class="card-button" onclick="shuffleCard()">Pick A Card</button>
+        <div id="card-container" class="card"></div>
+        <br>
+        <div id="card-key" class="card-meaning"></div>
+        <div id="card-meaning1" class="card-meaning"></div>
+        <div id="card-meaning2" class="card-meaning"></div>
+        <br>
+        <button class="card-button" onclick="window.open('all.html', '_blank');">?</button>
+        <p3>Disclaimer: Even Cupid’s just winging it.  Take these fortunes with a grain of stardust and maybe a pinch of common sense. We’re not liable if your crush shows up at your doorstep or you end up adopting a dozen cats</p3>
+        <footer>
+            <p2>all artwork is copyrighted, please don't use it without permission</p2><br>
+            <a href="https://iseej.github.io/Card/" target="_blank" style="font-size: 10px;">&copy; 2025 I-see Warisa Jaidee</a>
+        </footer>
+
+    </div>
+    
+
+    <script>
+        const cards = [
+            { 
+                name: '1. Golden Retriever', 
+                keywords:   'New beginnings, Spontaneity, Adventure',
+                meaning1: "Singles: Time for a fresh start, sweetheart! Love’s out there, and it’s a wild ride you’ll need to buckle up for. If you’re looking for excitement, this is your moment. Get out there and start an adventure! Whether it’s swiping right or taking a leap and asking that person out. No more overthinking, just dive in headfirst. After all, who cares if you fall? You'll get up, more fabulous than before.", 
+                meaning2: "Couples: Feeling stuck in the same old routine? Shake it up a little! You and your partner could use a spontaneous adventure to spice things up. Try something new, even if it’s as simple as a surprise date night, or better yet, a weekend getaway. The point is, make things exciting again!", 
+                imageUrl: 'IMG/card1.jpg' 
+            },
+            { 
+                name: '2. Duck', 
+                keywords:   'Manifestation, Creativity, Potential',
+                meaning1: "Singles: You’ve got the magic touch, so use it! You are so good at many things, seriously, you’ve got hobbies for days, so own it! Confidence is the key. Go show off those talents, be unapologetically yourself, and trust that the right person will be drawn to your energy. Stop sitting around waiting for a miracle; you're the miracle!",
+                meaning2: "Couples: Oh, you two are a power couple. Right now, you have all the tools to elevate your relationship to a whole new level. So what are you waiting for? Do something special, make it a moment you’ll both cherish. You can manifest joy and love in your relationship — just keep that positive energy flowing.",
+                imageUrl: 'IMG/card2.jpg' 
+            },
+            { 
+                name: '3. Bunny', 
+                keywords:   'Self-care, Power, Support',
+                meaning1: "Singles: Honey, you're single by choice; what are you even doing here?! You’re radiating energy that says, “I’m worth it,” and the universe is listening. Don’t doubt yourself, this is your time to shine. Focus on nurturing your personal growth and self-love, and you’ll attract someone who matches your vibe. You're in the middle of an abundance of love and opportunities, so don’t let fear hold you back.",
+                meaning2: "Couples: It’s time to nurture and care for each other a little extra. Take the time to do something kind and loving for your partner — cook their favorite meal, write a thoughtful note, or plan a surprise they’ll adore. You’re both in a space where your connection can flourish, so give it the care it deserves.",
+                imageUrl: 'IMG/card3.jpg' 
+            },
+            { 
+                name: '4. Doberman', 
+                keywords:   "Stability, Structure, Reliability",
+                meaning1: "Singles: You know exactly what you want, and that’s incredible. Now, it’s time to set those boundaries high. You’re not looking for just any connection — you’re looking for something that will last, something that brings stability and respect. Don’t settle for less than you deserve. If someone can’t meet your standards, that’s their loss, not yours. You’re building for the long haul, so be patient and trust that the right person will show up, someone who can match your strength and determination.",
+                meaning2: "Couples: You’re laying the groundwork for a strong future together, and that’s a beautiful thing. Whether it’s setting life goals, managing finances, or just making sure you both feel secure, this is the time to build something solid. Put in the work now, and it will pay off later. A strong foundation will make your relationship even more unshakeable. Trust that this stability will make your bond stronger in the long run.",
+                imageUrl: 'IMG/card4.jpg' 
+            },
+            { 
+                name: '5. Black cat', 
+                keywords:   "Consciousness, Commitment, Guidance",
+                meaning1:  "Singles: Sometimes love comes from places you least expect — like a friend of a friend or someone you’ve known for a while but never noticed in that way. This card encourages you to look at your community or network and see if there’s someone who shares your values or outlook on life. Trust the process, and the right person will come along when the time is right.",
+                meaning2: "Couples: Time for a serious talk, huh? Are you ready to make it official? You need to align your expectations and decide what’s next. If you're already a couple, this could mean you're heading toward a deeper commitment or even marriage. Either way, make sure you're both on the same page!",
+                imageUrl: 'IMG/card5.jpg' 
+            },
+  
+            { 
+                name: '6. Bird', 
+                keywords:   "Connection, Reunion, Choices",
+                meaning1: "Singles: Love is on the horizon, but it’s up to you to make the choice. Do you want someone who challenges you, or someone who vibes with you? Maybe there’s someone from your past—someone who started off as a friend—lingering in your thoughts. Could it be time to take that connection to the next level? Don’t be afraid to choose what’s best for your heart. You deserve love that feels like home, so let it unfold when it’s right.",
+                meaning2: "Couples: Awwwww You two are a perfect match right now, so enjoy it! If there’s any indecision or confusion in your relationship, it’s time to talk it out. Take your connection to the next level by making clear choices for the future. This is a great time to commit to each other and embrace all the love and joy that comes with being a couple.",
+                imageUrl: 'IMG/card6.jpg' 
+            },
+  
+            { 
+                name: '7. Chihuahua', 
+                keywords:   "Determination, Action, Success",
+                meaning1: "Singles: Hey, no more sitting on the sidelines! If you’ve got your eye on someone, go ahead and make a move. Stop second-guessing yourself — you’ve got the confidence and determination to make things happen. If you want something, go for it! Let the excitement and energy drive you forward. No more waiting around — take a leap, and see where it leads!",
+                meaning2: "Couples: You two are seriously on fire! Whatever you're planning, you’re both aligned and ready to take it on together. Whether it’s a big trip, a shared goal, or just a new chapter, you’re unstoppable. Keep that energy flowing, because with both of you pushing forward, success is a given. Keep building, keep growing — the future is yours!",
+                imageUrl: 'IMG/card7.jpg' 
+            },
+            { 
+                name: '8. Lion', 
+                keywords: "Courage, Patience, Passion",
+                meaning1:  "Singles: Oh, I see how it is. You’re totally crushing on someone, huh? That intense feeling is practically burning a hole through you, but here’s the deal; patience is your best friend right now. Just don't go jumping in headfirst like some love-struck fool. You’ve got the inner strength to hold off, so take a step back and wait for the right moment. Trust me, the right person will feel the same way. Drop those little hints, keep it cool, give it time, and it’ll work out just fine.",
+                meaning2: "Couples: You and your partner are totally in sync, huh? This connection is SO strong that it feels like you’re both in a gravitational pull, impossible to break. You understand each other on such a deep level, and honestly, it’s impossible to ignore the chemistry between you two. You’re down bad for each other, and it’s honestly adorable. Just remember, give each other some breathing room. True strength lies in allowing each other to grow together, not just around each other.",
+                imageUrl: 'IMG/card8.jpg' 
+            },
+            { 
+                name: '9. Snow Leopard', 
+                keywords:   "Contemplation, Solitude, Wisdom",
+                meaning1: "Singles: Take a moment to reflect on your past relationships — think about what worked, what didn’t, and what you learned. This is a period for personal growth, and it’s okay to take your time. Love doesn’t always show up on your timeline, but when it’s meant to happen, it will. The most important thing right now is to focus on becoming the best version of yourself. Don’t rush into anything, and trust that as you grow, the right person will come along when the time is right.",
+                meaning2: "Couples: Even the closest couples need space to grow individually. If you're feeling a little distant, it’s okay. Taking some time apart doesn’t mean you’re drifting apart — it’s actually an opportunity for reflection. Use this time to focus on your personal growth and gain clarity. When you come back together, you’ll find that you’re both stronger and more connected. Space isn’t a sign of weakness; it’s a way to nurture your relationship and come back with a deeper understanding of each other. Trust that this time will help you both grow and strengthen your bond.",
+                imageUrl: 'IMG/card9.jpg' 
+            },
+            { 
+                name: '10. Hamster', 
+                keywords:   'Change, Cycles, Luck',
+                meaning1: "Singles: Stuck in a loop, huh? One minute you’re over them, and the next... bam! They’re back in your head like a song you can’t skip. It's ok, this cycle won’t last forever. Either you move on for good, or fate’s about to spin things in your favor, and they’ll finally notice you back. Whatever happens, change is coming. Just stay open to whatever the universe throws your way, love’s about to surprise you. Be prepared.",
+                meaning2: "Couples: Relationships have their ups and downs, and right now, it might feel like you're stuck on repeat — the same arguments, the same routines. But change is brewing, and it’s going to shake things up (in a good way!). Embrace this shift, even if it feels a little chaotic at first. Sometimes breaking out of old patterns is exactly what you both need to reignite that spark. Trust that whatever’s coming next is guiding you toward a stronger, more exciting future together.",
+                imageUrl: 'IMG/card10.jpg' 
+            },
+  
+            { 
+                name: '11. Capybara', 
+                keywords:   "Relaxed, Hold back, Reconnect",
+                meaning1: "Singles: Okay, let’s be real. You’re wondering why everyone around you is in a relationship, but you’re still hanging out solo in your cozy little bubble. If you’re craving love, maybe it’s time to shift your perspective. Love won’t find you while you're tucked in with your book. Step outside, touch some grass, and maybe someone’s heart is just waiting for you to find it.",
+                meaning2: "Couples: You two are so close, yet something feels a little distant, huh? Maybe it’s time to shake things up and really see each other again. Let go of the routines, and try to reconnect on a deeper level. Sometimes, a little space is all it takes to remind you how much you truly miss each other. Yearning for each other can bring you even closer, so let that longing guide you back to one another. Remember, some things are worth the wait.",
+                imageUrl: 'IMG/card11.jpg' 
+            },
+            { 
+                name: '12. Deer', 
+                keywords:   "Transformation, Transition, Letting go",
+                meaning1: "Singles: Alright, something from your past is holding you back. Maybe it’s an old heartbreak or just lingering emotions that don’t serve you anymore. It’s time to let it all go. You’ve got a fresh start waiting for you, but first, you have to make space for it.  It’s about clearing out the emotional clutter to make room for love that’s truly meant for you.",
+                meaning2: "Couples: Your relationship is at a point of transformation. It’s time to let go of past hurts, misunderstandings, or old patterns. This is about forgiveness, healing, and renewing your connection. Instead of seeing it as an ending, view it as a chance to begin a new chapter — one where both of you grow stronger and closer together. Embrace the change, and you’ll find your bond becoming even deeper and more meaningful.",
+                imageUrl: 'IMG/card12.jpg' 
+            },
+            { 
+                name: '13. Orange Cat', 
+                keywords:   "Balance, Moderation, Harmony",
+                meaning1:   "Singles:  Not sure if you like them or just enjoy the good vibes? Totally normal! Don’t stress about rushing into anything. Just focus on keeping things balanced and let it flow. Enjoy the connection without forcing anything. The best things grow naturally, so let it happen at its own pace. If it’s meant to be, it’ll be. Just stay open and trust the process.",
+                meaning2: "Couples: Right now, it’s all about finding that sweet spot of balance. Make sure both of you feel heard, valued, and understood. It’s important to compromise and meet each other halfway, but also give space for personal needs. This card encourages deepening the bond by staying in sync with each other, so take the time to really connect. Don’t rush the process, trust in each other and your beautiful bond!",
+                imageUrl: 'IMG/card13.jpg' 
+            },
+            { 
+                name: '14. Card 14', 
+                keywords:   'sssss',
+                meaning1: 'Singles: The Raccoon', 
+                meaning2: 'Couples: The Raccoon', 
+                imageUrl: 'IMG/card14.jpg' 
+            },
+  
+            { 
+                name: '15. Sheep', 
+                keywords:   "Sudden Change, Awakening, Revelation",
+                meaning1: "Singles: Get ready, my dear. Someone unexpected might catch your eye, or maybe you’ll find out there’s been a secret crush all along. Ever thought, 'Nah, not my type'? Time to rethink that. Life’s about to shake things up in the best way, clearing out the old to make room for something better. Keep your heart open – this is going to be better than you imagined.",
+                meaning2: "Couples: A shift is coming in your relationship, and it might feel uncomfortable at first. But don’t stress, it’s all part of growing stronger together. Face the challenges with honesty, and you’ll discover a deeper connection. Embrace the change, and watch your bond grow even more solid and loving.",
+                imageUrl: 'IMG/card15.jpg' 
+            },
+  
+            { 
+                name: '16. Raccoon', 
+                keywords:   "Hope, Healing, Inspiration",
+                meaning1: "Singles: Sweetheart... you’re a hopeless romantic, dreaming of that perfect love, and that's beautiful. But while you’re waiting for it to sweep you off your feet, don't forget to keep in touch with your feelings. Align yourself with someone who truly gets you. Keep shining your light, stay true to your beliefs, and don’t lose hope. Oh, and when they text you? Don’t just giggle at your screen — text them back! Love needs a little nudge sometimes.",
+                meaning2: "Couples: If things have been a little rocky, now’s the time for healing and growth. Stay honest and communicative, and you’ll find yourselves stronger than before. The rough patches only make the good times sweeter, so let your love flourish and shine even brighter!",
+                imageUrl: 'IMG/card16.jpg' 
+            },
+  
+            { 
+                name: '17. Hedgehog', 
+                keywords:   "Confusion, Intuition, Subconscious",
+                meaning1: "Singles: Alright, enough with the games. Stop acting like you don’t care. Every time you crush on someone, why do you always push them away? Just admit it, you’re into them. Quit overthinking and let yourself feel. Stop holding back and see where it goes. Trust me, it'll be worth it. What? I'm wrong? Well, are you sure? Fine, fine, keep playing it cool... but don’t say I didn’t warn you.",
+                meaning2: "Couples: Look at you two. You’ve got that effortless understanding, like you’re practically family. But hey, is there something you’re hiding? A little secret or surprise you've been plotting? Now’s the time to share what's really on your mind. Be honest, open up, and let that vulnerability bring you even closer together.",
+                imageUrl: 'IMG/card17.jpg' 
+            },
+            { 
+                name: '18. Red panda', 
+                keywords:   "Joy, Celebration, Development",
+                meaning1: "Singles: Oh my, someone’s definitely got their eye on you, but you’re too busy being awesome to notice. That’s okay — keep doing your thing. You’re radiating positivity, and it’s impossible not to attract attention. People are drawn to your energy, so just enjoy life. Stay true to who you are, and soon enough, the right person will gather the courage to approach you.",
+                meaning2: "Couples: You’re in a sweet spot right now! Everything feels clear, joyful, and solid. Even if you’ve had your ups and downs, now is the time to celebrate all the amazing things about your relationship. There’s so much love and positivity between you two, and it's only going to get stronger from here. Keep basking in each other's glow, enjoying every little moment together. You’ve got this! Happy, happy vibes all around! Yippie!",
+                imageUrl: 'IMG/card18.jpg' 
+            },
+  
+
+        ];
+    
+        function shuffleCard() {
+            const cardContainer = document.getElementById('card-container');
+            const cardKey = document.getElementById('card-key');
+            const cardMeaningContainer1 = document.getElementById('card-meaning1');
+            const cardMeaningContainer2 = document.getElementById('card-meaning2');
+    
+            cardContainer.style.display = 'block';
+    
+            cardMeaningContainer1.style.display = 'none';
+            cardMeaningContainer2.style.display = 'none';
+            cardKey.style.display = 'none';
+            
+            let sequence = generateRandomSequence();
+
+            let index = 0;
+            const shuffleInterval = setInterval(() => {
+                cardContainer.style.backgroundImage = `url(${sequence[index]})`;
+                index++;
+    
+                if (index === sequence.length) {
+                    
+                    clearInterval(shuffleInterval);
+                    const randomIndex = Math.floor(Math.random() * cards.length);
+                    const card = cards[randomIndex];
+    
+                    
+                    cardContainer.style.backgroundImage = `url(${card.imageUrl})`;
+    
+                    cardKey.textContent = card.keywords;
+                    cardMeaningContainer1.textContent = card.meaning1;
+                    cardMeaningContainer2.textContent = card.meaning2;
+                    cardMeaningContainer1.style.display = 'block';
+                    cardMeaningContainer2.style.display = 'block';
+                    cardKey.style.display = 'block';
+                }
+            }, 150); 
+        }
+    
+        function generateRandomSequence(limit = 5) {
+    const images = [...cards.map(card => card.imageUrl)]; 
+    const sequence = [];
+
+    while (sequence.length < limit && images.length) {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        sequence.push(images.splice(randomIndex, 1)[0]);
+    }
+
+    return sequence;
+}
+
+
+    function triggerIconShower(event) {
+    for (let i = 0; i < 15; i++) { 
+      const icon = document.createElement('div');
+      icon.classList.add('icon');
+    
+      const iconContent = Math.random() > 0.5 ? '♥': '★'; 
+      icon.textContent = iconContent;
+
+     
+      if (iconContent === '♥') {
+        icon.classList.add('heart');
+      }
+      else{
+        icon.classList.add('star');
+      }
+
+     
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+
+      icon.style.left = `${x}px`;
+      icon.style.top = `${y}px`;
+
+     
+      document.body.appendChild(icon);
+
+      
+      setTimeout(() => {
+        icon.remove();
+      }, 3000); 
+    }
+  }
+
+    </script>
+    
