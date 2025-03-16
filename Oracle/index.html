@@ -81,7 +81,7 @@
         background-color: #fff;
         border-radius: 20px;
         /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);*/
-        display: none; /* Initially hidden */
+        display: none;
         background-size: cover;
         background-position: center;
         transition: transform 0.5s ease-in-out;
@@ -92,7 +92,7 @@
         font-size: 16px;
         color: var(--6-color);
         margin-top: 10px;
-        display: none; /* Initially hidden */
+        display: none; 
     }
 
     .card-button {
@@ -222,6 +222,62 @@ footer {
     
 
     <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    let resultPage = document.getElementById("start-page");
+
+    function checkAndTriggerGif() {
+        if (!resultPage.hidden && getComputedStyle(resultPage).display !== "none") { 
+            let randomInterval = Math.floor(Math.random() * 70000) + 10000;
+            setTimeout(showFloatingGif, randomInterval); 
+        }
+    }
+
+    function showFloatingGif() {
+        if (resultPage.hidden || getComputedStyle(resultPage).display === "none") return;
+
+        let gif = document.createElement("img");
+        gif.src = "IMG/C9.gif";  
+        gif.style.position = "absolute";
+        gif.style.top = Math.random() * (window.innerHeight - 150) + "px"; 
+        gif.style.right = "-200px";
+        gif.style.width = "150px";
+        gif.style.cursor = "pointer";
+        gif.style.animation = "floatUpDown 3s ease-in-out infinite"; 
+        
+        gif.onclick = function () {
+            window.open("https://iseej.github.io/LovePawsona/new", "_blank"); 
+        };
+        document.body.appendChild(gif);
+
+        setTimeout(() => {
+            gif.style.transition = "right 7s linear";
+            gif.style.right = window.innerWidth + "px"; 
+        }, 100);
+
+        setTimeout(() => {
+            gif.remove();
+        }, 6000);
+        checkAndTriggerGif();
+    }
+
+    let observer = new MutationObserver(checkAndTriggerGif);
+    observer.observe(resultPage, { attributes: true, attributeFilter: ["style"] });
+
+    let style = document.createElement("style");
+    style.innerHTML = `
+        @keyframes floatUpDown {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); } 
+            100% { transform: translateY(0px); } 
+        }
+    `;
+    document.head.appendChild(style);
+
+    checkAndTriggerGif();  
+});
+
+
         const cards = [
             { 
                 name: '1. Golden Retriever', 
