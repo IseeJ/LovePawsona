@@ -417,7 +417,7 @@ const dialogue = [
     // 29 (Q11_2,3)
     {
         speaker: 'bot',
-        text: ["Ooooh, looks like someone's playing Cupid!", "11) Any wisdom to share, love expert?"],
+        text: ["Ooooh, looks like someone's playing Cupid!", "11) Any wisdom to , love expert?"],
         choices: [
             { id: 1, text: "Never settle for less. You know what's best for yourself", type: 'B', weight: 2, next: 33, followUpText: [] },
             { id: 2, text: "Put in the effort, strive to make your loved one happy", type: 'W', weight: 2, next: 33, followUpText: [] },
@@ -749,7 +749,7 @@ A: ${scores.A}, R: ${scores.R}`;
 
 
 
-function share() {
+/*function share() {
     const link = window.location.href;
     
     navigator.clipboard.writeText(link)
@@ -767,7 +767,20 @@ function share() {
         downloadLink.download = 'myresult.png';
         downloadLink.click();
     });
+}*/
+
+function share() {
+    const resultImg = document.getElementById("result-image");
+    const imgSrc = resultImg.src;
+
+    const link = document.createElement("a");
+    link.href = imgSrc;
+    link.download = imgSrc.split("/").pop(); 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
+
 
 
 
