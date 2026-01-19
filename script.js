@@ -82,7 +82,7 @@ const dialogue = [
         choices: [
             { id: 1, text: '*Open*', type: 'A', weight: 2, next: 2, followUpText: [] },
             { id: 2, text: '*Ignore it*', type: 'R', weight: 2, next: 1, followUpText: [] },
-            { id: 2, text: 'DEBUG', type: 'O', weight: 0, next: 100, followUpText: [] },
+            /*{ id: 2, text: 'DEBUG', type: 'O', weight: 0, next: 100, followUpText: [] },*/
         ]
     },
     // 1
