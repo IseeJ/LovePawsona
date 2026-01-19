@@ -749,7 +749,7 @@ A: ${scores.A}, R: ${scores.R}`;
 
 
 
-function share() {
+/*function share() {
     const link = window.location.href;
     
     navigator.clipboard.writeText(link)
@@ -767,7 +767,21 @@ function share() {
         downloadLink.download = 'myresult.png';
         downloadLink.click();
     });
+}*/
+
+
+function share() {
+    const resultImg = document.getElementById("result-image");
+    const imgSrc = resultImg.src;
+
+    const link = document.createElement("a");
+    link.href = imgSrc;
+    link.download = imgSrc.split("/").pop(); 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
+
 
 
 
