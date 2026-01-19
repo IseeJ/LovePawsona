@@ -82,7 +82,7 @@ const dialogue = [
         choices: [
             { id: 1, text: '*Open*', type: 'A', weight: 2, next: 2, followUpText: [] },
             { id: 2, text: '*Ignore it*', type: 'R', weight: 2, next: 1, followUpText: [] },
-            //{ id: 2, text: 'DEBUG', type: 'O', weight: 0, next: 100, followUpText: [] },
+            { id: 2, text: 'DEBUG', type: 'O', weight: 0, next: 100, followUpText: [] },
         ]
     },
     // 1
@@ -417,7 +417,7 @@ const dialogue = [
     // 29 (Q11_2,3)
     {
         speaker: 'bot',
-        text: ["Ooooh, looks like someone's playing Cupid!", "11) Any wisdom to , love expert?"],
+        text: ["Ooooh, looks like someone's playing Cupid!", "11) Any wisdom to share, love expert?"],
         choices: [
             { id: 1, text: "Never settle for less. You know what's best for yourself", type: 'B', weight: 2, next: 33, followUpText: [] },
             { id: 2, text: "Put in the effort, strive to make your loved one happy", type: 'W', weight: 2, next: 33, followUpText: [] },
@@ -604,27 +604,27 @@ function displayResult() {
         'WPA': 'Bunny',
         'WPR': 'Red Panda'
     }
+const resultImages = {
+    'BGA': '1.jpg',
+    'BGR': '2.jpg',
+    'BDA': '3.jpg',
+    'BDR': '4.jpg',
+    'BPA': '5.jpg',
+    'BPR': '6.jpg',
+    'SGA': '7.jpg',
+    'SGR': '8.jpg',
+    'SDA': '9.jpg',
+    'SDR': '10.jpg',
+    'SPA': '11.jpg',
+    'SPR': '12.jpg',
+    'WGA': '13.jpg',
+    'WGR': '14.jpg',
+    'WDA': '15.jpg',
+    'WDR': '16.jpg',
+    'WPA': '17.jpg',
+    'WPR': '18.jpg',
+};
 
-    const resultImages = {
-        'BGA': '1.png',
-        'BGR': '2.png',
-        'BDA': '3.png',
-        'BDR': '4.png',
-        'BPA': '5.png',
-        'BPR': '6.png',
-        'SGA': '7.png',
-        'SGR': '8.png',
-        'SDA': '9.png',
-        'SDR': '10.png',
-        'SPA': '11.png',
-        'SPR': '12.png',
-        'WGA': '13.png',
-        'WGR': '14.png',
-        'WDA': '15.png',
-        'WDR': '16.png',
-        'WPA': '17.png',
-        'WPR': '18.png',
-    };
     //document.getElementById('result-text').textContent = resultType + ' ' + resultsText[resultType];
     /*document.getElementById('result-image').src = resultImages[resultType];
     document.getElementById('result-overlay').style.display = 'flex';*/
@@ -749,7 +749,7 @@ A: ${scores.A}, R: ${scores.R}`;
 
 
 
-/*function share() {
+function share() {
     const link = window.location.href;
     
     navigator.clipboard.writeText(link)
@@ -767,20 +767,7 @@ A: ${scores.A}, R: ${scores.R}`;
         downloadLink.download = 'myresult.png';
         downloadLink.click();
     });
-}*/
-
-function share() {
-    const resultImg = document.getElementById("result-image");
-    const imgSrc = resultImg.src;
-
-    const link = document.createElement("a");
-    link.href = imgSrc;
-    link.download = imgSrc.split("/").pop(); 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
 }
-
 
 
 
