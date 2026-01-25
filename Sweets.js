@@ -322,7 +322,7 @@ const dialogue = [
             { id: 2, text: "We met at workplace/school", type: "R", weight: 1, type2: "D", next: 28, followUpText: [] },
             { id: 3, text: "Networking event, party, mutual friends", type: "A", type2: "P", weight: 1, next: 28, followUpText: [] },
             { id: 4, text: "We just kinda found each other tbh, it's meant to be", type: "R",  type2: "G", weight: 1, next: 28, followUpText: [] },
-            { id: 5, text: "Online/Dating Apps", type: "R", type:"P", weight: 1, next: 28, followUpText: [] },
+            { id: 5, text: "Online/Dating Apps", type: "R", type2:"P", weight: 1, next: 28, followUpText: [] },
         ]
     },
 
