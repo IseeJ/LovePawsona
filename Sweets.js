@@ -176,9 +176,9 @@ const dialogue = [
         speaker: "bot",
         text: ["Adorable", "5) Your type is someone who..."],
         choices: [
-            { id: 1, text: "never failed to surprise me. Keeping it fun, energetic, and a bit chaotic!", type: "P", weight: 1, next: 31, followUpText: [] },
-            { id: 2, text: "pay attention, remember the small things. Make me feel seen :)", type: "D", weight: 1, next: 31, followUpText: [] },
-            { id: 3, text: "take good care of me, put in the effort to keep me happy, being there, always.", type: "G", weight: 1, next: 31, followUpText: [] },
+            { id: 1, text: "never failed to surprise me. Keeping it fun, energetic, and a bit chaotic!", type: "P", weight: 1, next: 16, followUpText: [] },
+            { id: 2, text: "pay attention, remember the small things. Make me feel seen :)", type: "D", weight: 1, next: 16, followUpText: [] },
+            { id: 3, text: "take good care of me, put in the effort to keep me happy, being there, always.", type: "G", weight: 1, next: 16, followUpText: [] },
         ]
     },
 
