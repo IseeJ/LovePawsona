@@ -257,10 +257,10 @@ const dialogue = [
         speaker: "bot",
         text: ["9) When they give you their time, you expect them to..."],
         choices: [
-            { id: 1, text: "Just be by my side, doing our own things", type: "R", weight: 1, next: 25, followUpText: [] },
+            { id: 1, text: "Sweep me off my feet somewhere nice and pamper me", type: "A", weight: 1, next: 25, followUpText: [] },
             { id: 2, text: "Plan a fun date together, hanging out and having fun", type: "A", weight: 1, next: 25, followUpText: [] },
-            { id: 3, text: "Always there when I need them, anytime, no questions", type: "R", weight: 1, next: 25, followUpText: [] },
-            { id: 4, text: "Sweep me off my feet somewhere nice and pamper me", type: "A", weight: 1, next: 25, followUpText: [] },
+            { id: 3, text: "Just be by my side, doing our own things", type: "R", weight: 1, next: 25, followUpText: [] },
+            { id: 4, text: "Always there when I need them, anytime, no questions", type: "R", weight: 1, next: 25, followUpText: [] },
         ]
     },
     // 23 (13.5)
@@ -363,7 +363,7 @@ const dialogue = [
     // 31 (10)
     {
         speaker: "bot",
-        text: ["Stawppp now im jealouss, and curious..", "6) You like it a lot when they say..."],
+        text: ["Stawppp now im jealouss, and curious..", "6) The kind of texts you get from them sound like..."],
         choices: [
             { id: 1, text: "You’ve been on my mind all day and I’m not even trying to stop it", type: "D", type2: "B", weight: 1, next: 32, followUpText: [] },
             { id: 2, text: "BABEEE THIS IS SO YOUUU *cat memes*", type: "P", type2: "S", weight: 1, next: 32, followUpText: [] },
