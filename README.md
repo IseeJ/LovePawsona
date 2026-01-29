@@ -28,8 +28,6 @@ Start: 12/15/24
 
 Finished: 02/07/2025
 
-Last Updated: 
-
 Made with: VS Code, Google Slides, ibisPaint
 
 
