@@ -22,7 +22,7 @@
         --5-color: #ade1eb;
         --6-color: #2a3031;
         --8-color: #f3dada;
-        --9-color:#dbaec5;
+        --9-color: #dbaec5;
 
     }
 
@@ -63,7 +63,8 @@
         border-top-right-radius: 30px;
         cursor: pointer;
     }
-    .header:hover{
+
+    .header:hover {
         font-size: 16px;
 
     }
@@ -427,37 +428,36 @@
         visibility: visible;
         opacity: 1;
     }
+
     .icon-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-}
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-.app-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px; 
-    transition: transform 0.2s ease-in-out;
-}
+    .app-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        transition: transform 0.2s ease-in-out;
+    }
 
-.icon-caption {
-    font-size: 14px;
-    color: var(--8-color);
-    margin-top: 5px; 
-    text-align: center;
-    font-family: 'Andale Mono', monospace;
-}
+    .icon-caption {
+        font-size: 14px;
+        color: var(--8-color);
+        margin-top: 5px;
+        text-align: center;
+        font-family: 'Andale Mono', monospace;
+    }
 
-.icon-button:hover .app-icon {
-    transform: scale(1.1); 
-}
-
-
+    .icon-button:hover .app-icon {
+        transform: scale(1.1);
+    }
 </style>
 </head>
 
@@ -465,8 +465,8 @@
     <div class="start-page" id="start-page">
         <h1>
             <div class="a2" onclick="triggerIconShower(event)">
-                Love Pawsona </div>  
-                
+                Love Pawsona </div>
+
         </h1>
         <img src="IMG/front1.gif" class="top-image" alt="Top Image" onclick="triggerIconShower(event)">
         <div class="button-group">
@@ -481,20 +481,32 @@
         <p2>Personality quiz inspired by <a href="https://www.16personalities.com/free-personality-test">MBTI</a>, <a
                 href="https://typeofyou.alltheway.tw/en/">Innate Personality Traits</a>.
         </p2>
-        <p2>This quiz is created for entertainment purposes only.<br>Feedback is always welcome! <br> Art and code by: <a href="https://iseej.github.io/Card/" target="_blank" style="font-size: 10px; ">@IzonFalzo</a></p2>
+        <p2>This quiz is created for entertainment purposes only.<br>Feedback is always welcome! <br> Art and code by:
+            <a href="https://iseej.github.io/Card/" target="_blank" style="font-size: 10px; ">@IzonFalzo</a></p2>
     </div>
 
 
     <div class="phone-screen" id="interm" style="display: none; background-color: rgb(22, 22, 22);">
         <div class="header" id="header1" style="color: var(--8-color); background-color: rgb(22, 22, 22);"
-        onclick="window.open('new.html', '_blank');">02/14</div>
+            onclick="window.open('new.html', '_blank');">02/14</div>
         <br><br><br>
-        <p style="color: var(--8-color); text-align: center; margin-left: 25px; margin-right: 25px;">"It’s Valentine’s Day. As you drift in thought, your phone suddenly flickers to life. The apps pulse softly on the screen, waiting for your touch..."</p>
+        <p style="color: var(--8-color); text-align: center; margin-left: 25px; margin-right: 25px;">"It’s Valentine’s
+            Day. As you drift in thought, your phone suddenly flickers to life. The apps pulse softly on the screen,
+            waiting for your touch..."</p>
         <br><br><br>
         <button id="start-button" class="icon-button">
             <img src="IMG/Heh/C0.png" alt="App" class="app-icon">
             <span class="icon-caption">CupidConnect</span>
         </button>
+
+        <br>
+        <br>
+        <button id="sweet-button" class="icon-button"  onclick="window.location.href='https://iseej.github.io/LoveSweetsona'">
+            <img src="IMG/sweet.PNG" alt="App" class="app-icon">
+            <span class="icon-caption">CupidSweets</span>
+        </button>
+
+
 
     </div>
 
@@ -513,12 +525,14 @@
             #LovePawsona
         </div>
 
-        <p>Made by <a href="https://www.instagram.com/izonfalzo" target="_blank">@izonfalzo</a>       Support me on  <a href="https://ko-fi.com/izonfalzo" target="_blank">Ko-fi!</a>
-            <br>Give feedback/Report bugs <a href="https://forms.gle/fafFcTk8WS9WkJ1h6" target="_blank">Here</a></p>
+        <p>Made by <a href="https://www.instagram.com/izonfalzo" target="_blank">@izonfalzo</a> Support me on <a
+                href="https://ko-fi.com/izonfalzo" target="_blank">Ko-fi!</a>
+            <br>Give feedback/Report bugs <a href="https://forms.gle/fafFcTk8WS9WkJ1h6" target="_blank">Here</a>
+        </p>
 
         </p>
-        
-                    <img id="result-image" class="result-image" src="" alt="">
+
+        <img id="result-image" class="result-image" src="" alt="">
         <p id="result-text" class="result-text"></p>
         <div class="button-group">
             <button class="restart-button tooltip" onclick="share()">Share
@@ -540,10 +554,11 @@
             }<br>
         </p3>
         <p3 style="color: #fcedcd">
-            <br>P.S. again, there are easter (not) eggs! Cupid has the 
+            <br>P.S. again, there are easter (not) eggs! Cupid has the
             <div class="tooltip">hint
                 <span class="tooltiptext">Where can you find Cupid?</span>
-            </div> have fun!</p3>
+            </div> have fun!
+        </p3>
     </div>
 
 
@@ -556,7 +571,7 @@
     <footer>
         <p2>all artwork is copyrighted, please don't use it without permission</p2><br>
         <a href="https://iseej.github.io/Card/" target="_blank" style="font-size: 10px; ">&copy; 2025-2026 I-see Warisa
-            Jaidee. All Rights Reserved.</a> 
+            Jaidee. All Rights Reserved.</a>
     </footer>
 
     <audio id="notifSound" src="vibe.mp3"></audio>
