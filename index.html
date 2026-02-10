@@ -126,7 +126,7 @@
         width: 100%;
     }
 
-            @media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
     .choice-button:hover {
         background-color: var(--3-color);
     }
@@ -283,6 +283,15 @@
     .restart-button:hover {
         background-color: #fca2cf;
     }
+
+
+    
+    @media (hover: none) {
+    .start-button:hover,
+    .restart-button:hover {
+        filter: none;
+    }
+}
 
     .start-page p,
     .start-page p1 {
